@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'login.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.5.3
+## Created by: Qt User Interface Compiler version 6.8.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -15,8 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QDialog, QLabel, QPushButton,
-    QSizePolicy, QTextEdit, QWidget)
+from PySide6.QtWidgets import (QApplication, QDialog, QLabel, QLineEdit,
+    QPushButton, QSizePolicy, QTextEdit, QWidget)
 
 class Ui_LoginWindow(object):
     def setupUi(self, LoginWindow):
@@ -25,6 +25,8 @@ class Ui_LoginWindow(object):
         LoginWindow.resize(400, 140)
         LoginWindow.setMinimumSize(QSize(400, 140))
         LoginWindow.setMaximumSize(QSize(400, 140))
+        icon = QIcon(QIcon.fromTheme(u"accessories-calculator"))
+        LoginWindow.setWindowIcon(icon)
         self.pushButton = QPushButton(LoginWindow)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setGeometry(QRect(120, 100, 75, 24))
@@ -33,11 +35,6 @@ class Ui_LoginWindow(object):
         self.LoginSpace.setGeometry(QRect(120, 30, 231, 21))
         self.LoginSpace.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.LoginSpace.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.PasswordSpace = QTextEdit(LoginWindow)
-        self.PasswordSpace.setObjectName(u"PasswordSpace")
-        self.PasswordSpace.setGeometry(QRect(120, 60, 231, 21))
-        self.PasswordSpace.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.PasswordSpace.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.label = QLabel(LoginWindow)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(70, 30, 49, 16))
@@ -57,6 +54,10 @@ class Ui_LoginWindow(object):
         self.label_3 = QLabel(LoginWindow)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(70, 10, 281, 16))
+        self.PasswordSpace = QLineEdit(LoginWindow)
+        self.PasswordSpace.setObjectName(u"PasswordSpace")
+        self.PasswordSpace.setGeometry(QRect(120, 60, 231, 22))
+        self.PasswordSpace.setEchoMode(QLineEdit.Password)
 
         self.retranslateUi(LoginWindow)
 
@@ -64,7 +65,7 @@ class Ui_LoginWindow(object):
     # setupUi
 
     def retranslateUi(self, LoginWindow):
-        LoginWindow.setWindowTitle(QCoreApplication.translate("LoginWindow", u"Dialog", None))
+        LoginWindow.setWindowTitle(QCoreApplication.translate("LoginWindow", u"iWallet - \u0410\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u044f", None))
         self.pushButton.setText(QCoreApplication.translate("LoginWindow", u"\u0412\u043e\u0439\u0442\u0438", None))
         self.label.setText(QCoreApplication.translate("LoginWindow", u"\u041b\u043e\u0433\u0438\u043d", None))
         self.label_2.setText(QCoreApplication.translate("LoginWindow", u"\u041f\u0430\u0440\u043e\u043b\u044c", None))
